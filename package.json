@@ -1,0 +1,26 @@
+{
+  "name": "b-dialogs",
+  "version": "1.0.0",
+  "description": "A bootstrap plugin to generate dialogs easily",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vusumzi123/b-dialogs.js.git"
+  },
+  "keywords": [
+    "Bootstrap",
+    "4",
+    "Dialog",
+    "modals",
+    "jquery"
+  ],
+  "author": "Vusuzmi123",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vusumzi123/b-dialogs.js/issues"
+  },
+  "homepage": "https://github.com/Vusumzi123/b-dialogs.js#readme"
+}
