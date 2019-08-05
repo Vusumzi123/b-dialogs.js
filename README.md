@@ -1,7 +1,16 @@
 # b-dialogs.js
 bootstrap plugin to generate dialogs easily
 
-## Get Started
+* [Getting Started](https://github.com/Vusumzi123/b-dialogs.js/blob/master/README.md#get-started)
+  * [Requirements](https://github.com/Vusumzi123/b-dialogs.js/blob/master/README.md#requirements)
+* [Basic Usage](https://github.com/Vusumzi123/b-dialogs.js/blob/master/README.md#basic-usage)
+* [Advanced usage](https://github.com/Vusumzi123/b-dialogs.js/blob/master/README.md#advanced-usage)
+  * [Configuring](https://github.com/Vusumzi123/b-dialogs.js/blob/master/README.md#configuring)
+
+
+
+
+## Getting Started
 
 ### Requirements
 this plugin needs bootstrap3+ botstrap4 recomended, and jquery 3.4+ to work
