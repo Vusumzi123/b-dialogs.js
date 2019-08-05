@@ -33,6 +33,6 @@ that will generate a dialog with the text yo inserted into the onject's paramete
 
 To add functionality to the buttons you jus need to use the then() and catch() methods, both receive a function as parameter.
 
-##Advanced usage
+## Advanced usage
 
 //TODO
