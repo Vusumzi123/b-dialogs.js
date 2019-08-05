@@ -2,6 +2,12 @@
 bootstrap plugin to generate dialogs easily
 
 ## Get Started
+
+### Requirements
+this plugin needs bootstrap3+ botstrap4 recomended, and jquery 3.4+ to work
+https://getbootstrap.com/
+https://jquery.com/download/
+
 you just need to add as a dependency in your web page, like this:
 
 ```html
