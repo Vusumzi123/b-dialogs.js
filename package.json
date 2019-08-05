@@ -4,7 +4,8 @@
   "description": "A bootstrap plugin to generate dialogs easily",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,19 @@
   "bugs": {
     "url": "https://github.com/Vusumzi123/b-dialogs.js/issues"
   },
-  "homepage": "https://github.com/Vusumzi123/b-dialogs.js#readme"
+  "homepage": "https://github.com/Vusumzi123/b-dialogs.js#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
 }
