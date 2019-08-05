@@ -9,6 +9,11 @@ you just need to add as a dependency in your web page, like this:
 ```
 * just add it after bootstrap and jquery
 
+or download the package via NPM
+```
+  npm install b-dialogs
+```
+
 to use just call the object with the dislog method like this:
 
 ```js
