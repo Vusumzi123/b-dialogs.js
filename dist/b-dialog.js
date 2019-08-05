@@ -123,7 +123,7 @@ var Localization = Object.freeze({
    */
   EN: {
     tittleSufix: 'SAYS',
-    genericBody: '!--- This is a generic modal body. </br> place your html here --',
+    genericBody: '<i>!--- This is a generic modal body. </br> place your html here --</i>',
     acceptButtonText: 'Ok',
     cancelButtonText: 'Cancel'
   },
@@ -135,12 +135,12 @@ var Localization = Object.freeze({
    */
   ES: {
     tittleSufix: 'DICE',
-    genericBody: '!-- Esto es un modal gen&eacute;rico. </br> inserta tu c&oacute;digo html aqu&iacute; --',
+    genericBody: '<i>!-- Esto es un modal gen&eacute;rico. </br> inserta tu c&oacute;digo html aqu&iacute; --</i>',
     acceptButtonText: 'Aceptar',
     cancelButtonText: 'Cancelar'
   }
 });
-// CONCATENATED MODULE: ./src/modal.module.js
+// CONCATENATED MODULE: ./src/BNotifications.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -185,6 +185,11 @@ function () {
   function BNotification(config, locale, w) {
     _classCallCheck(this, BNotification);
 
+    if (!window.jQuery || !hasBootstrap()) {
+      console.error(":(");
+      throw "You need to have bootstrap3+ and jquery 3+";
+    }
+
     _config = config;
     _locale = locale;
     w.$notifications = this;
@@ -211,21 +216,18 @@ function () {
         autoClose: true,
         isInfo: false,
         closeOutside: false,
-        centered: false
+        centered: true
       };
 
       var dataObj = _objectSpread({}, defaultObject, {}, customData);
 
       var currentIndex = modalCount;
-      console.log(currentIndex);
       $("body").append(genHtml(dataObj, dataObj.isInfo, currentIndex));
       $('#general-modal-' + currentIndex).modal('show');
       $('#general-modal-' + currentIndex).on('hidden.bs.modal', function (e) {
         $('#general-modal-' + currentIndex).remove();
       });
       $('#accept-modal-buton-' + currentIndex).on('click', function () {
-        console.log("se dio click en aceptar", currentIndex);
-        console.log(dataObj.autoClose);
         if (dataObj.autoClose) closeModal(currentIndex);
       });
       $('#cancel-modal-buton-' + currentIndex).on('click', function () {
@@ -323,7 +325,17 @@ function closeModal(id) {
   setTimeout(function () {
     $('#general-modal-' + id).remove();
   }, 200);
-  console.log("Modal closed", '#general-modal-' + id);
+}
+/** 
+ * @function hasBootstrap 
+ * @description Function that checks if bootstrap is available
+ * @memberof BNotification
+ */
+
+
+function hasBootstrap() {
+  var entry = $('script[src*="bootstrap"]');
+  return entry.length;
 }
 // CONCATENATED MODULE: ./src/index.js
 
