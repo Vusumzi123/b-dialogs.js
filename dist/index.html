@@ -21,9 +21,24 @@
 
     <h1>Hola Mundo!</h1>
 
-    <button class="btn btn-primary" onclick="$notifications.dialog()">Show Modal</button>
+    <button class="btn btn-primary" id="modal-button">Show Modal</button>
 
 
-<script type="text/javascript" src="b-dialog.min.js"></script></body>
+    <script type="text/javascript" src="b-dialog.min.js"></script>
+
+    <script>
+        $("#modal-button").click(function(){
+            $notification.dialog({
+                body="<button class='btn btn-warning' onClick='$notification.dialog()'></button>"
+            });
+        }).then(function(){
+            console.log("Aceptaste el modal 1");
+        })
+        .catch(function() {
+            console.log("Cancelast el modal 1");
+        })
+    </script>
+
+</body>
 
 </html>

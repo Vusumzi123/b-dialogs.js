@@ -241,8 +241,10 @@ function () {
         });
       }
 
+      window.setTimeout(function () {
+        $('#accept-modal-buton-' + currentIndex).focus();
+      }, 600);
       modalCount++;
-      var modalInstance = this;
       return {
         then: function then() {
           var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function () {};
@@ -250,7 +252,7 @@ function () {
             callback();
             if (dataObj.autoClose) closeModal(currentIndex);
           });
-          return modalInstance;
+          return this;
         },
         "catch": function _catch() {
           var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function () {};
@@ -258,7 +260,7 @@ function () {
             callback();
             if (dataObj.autoClose) closeModal(currentIndex);
           });
-          return modalInstance;
+          return this;
         }
       };
     }

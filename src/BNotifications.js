@@ -81,8 +81,11 @@ export class BNotification {
             })
         }
 
+        window.setTimeout(function(){
+            $('#accept-modal-buton-' + currentIndex).focus();
+        },600);
+
         modalCount++;
-        const modalInstance = this;
 
         return {
             then: function (callback = function () { }) {
@@ -91,7 +94,7 @@ export class BNotification {
                     if (dataObj.autoClose)
                         closeModal(currentIndex);
                 });
-                return modalInstance;
+                return this;
             },
             catch: function (callback = function () { }) {
                 $('#cancel-modal-buton-' + currentIndex).on('click', function () {
@@ -99,7 +102,7 @@ export class BNotification {
                     if (dataObj.autoClose)
                         closeModal(currentIndex);
                 });
-                return modalInstance;
+                return this;
             }
         }
     }
