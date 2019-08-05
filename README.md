@@ -1,13 +1,13 @@
 # b-dialogs.js
 bootstrap plugin to generate dialogs easily
 
-##Get Started
+## Get Started
 you just need to add as a dependency in your web page, like this:
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Vusumzi123/b-dialogs.js@master/dist/b-dialog.min.js"></script>
 ```
-*just add it after bootstrap and jquery
+* just add it after bootstrap and jquery
 
 to use just call the object with the dislog method like this:
 
