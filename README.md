@@ -76,7 +76,7 @@ the default values are as follows
   }
 ```
 
-###Configuring
+### Configuring
 rigth now the only configuration the plugin suports is language and only supported languages are english and spanish, the default value is Engrish 'EN'
 
 to change the plugin language just execute the next sentence:
