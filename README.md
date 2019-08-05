@@ -14,7 +14,7 @@ or download the package via NPM
   npm install b-dialogs
 ```
 
-to use just call the object with the dislog method like this:
+to use just call the object with the dialog method like this:
 
 ```js
 $notifications.dialog()
@@ -52,7 +52,7 @@ like this:
 
 ## Advanced usage
 
-the dialog method receives an object, the object needs to have on or any number of the next parameters otherwhise it will take the default values
+the dialog method receives an object, the object needs to have one or any number of the next parameters otherwhise it will take the default values
 ```js
    {
     tittle: string, //title you want to show in the header of the modal
