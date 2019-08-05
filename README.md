@@ -38,7 +38,7 @@ $notifications.dialog()
 it will show the default dialog template
 
 ## Basic Usage
-to customize add an object to the parameter of the dialog function with the properties: tittle and body
+to customize add an object to the parameter of the dialog method with the properties: tittle and body
 they are both strings and can have html sintax
 like this:
 
