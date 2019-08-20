@@ -43,7 +43,7 @@ they are both strings and can have html sintax
 like this:
 
 ```js
-  $notification.dialog({
+  $notifications.dialog({
     tittle: "A title:",
     body: "<h1>This is an HTML body example </h1>"
   });
@@ -55,7 +55,7 @@ To add functionality to the buttons you jus need to use the then() and catch() m
 
 like this:
 ```js
-  $notification.dialog({
+  $notifications.dialog({
     tittle: "A title:",
     body: "<h1>This is an HTML body example </h1>"
   }).then(function(){
